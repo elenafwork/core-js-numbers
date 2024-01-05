@@ -232,8 +232,20 @@ function isPrime(n) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(/* value, def */) {
-  return 0;
+function toNumber(value, def) {
+  if (value!==null && value!==undefined){
+     
+    if (typeof value === 'number') {
+    return value;
+    }
+    if (typeof value.valueOf() === 'number') {
+    return +value.valueOf();
+    }
+    if (typeof value==='string' && )
+  }
+  
+  
+  console.log(def);
 }
 
 /**
