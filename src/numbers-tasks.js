@@ -233,19 +233,20 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  if (value!==null && value!==undefined){
-     
+  if (value !== null && value !== undefined) {
     if (typeof value === 'number') {
-    return value;
+      return value;
     }
-    if (typeof value.valueOf() === 'number') {
-    return +value.valueOf();
+
+    if (typeof value === 'object' && typeof value.valueOf() === 'number') {
+      return value.valueOf();
     }
-    if (typeof value==='string' && )
+    if (typeof value === 'string' && Number.isNaN(+value) !== true) {
+      return +value.valueOf();
+    }
+    return def;
   }
-  
-  
-  console.log(def);
+  return def;
 }
 
 /**
