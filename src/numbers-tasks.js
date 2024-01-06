@@ -370,8 +370,8 @@ function getSine(num) {
  * 255, 16 => 'ff'
  * 2, 2    => '10'
  */
-function numberToStringInBase(/* number, base */) {
-  return 0;
+function numberToStringInBase(number, base) {
+  return number.toString(base);
 }
 
 /**
@@ -384,8 +384,8 @@ function numberToStringInBase(/* number, base */) {
  * @example:
  * 12345, 2    => '1.23e+4'
  */
-function toExponential(/* number, fractionDigits */) {
-  return 0;
+function toExponential(number, fractionDigits) {
+  return number.toExponential(fractionDigits).toString();
 }
 
 /**
