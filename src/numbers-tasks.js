@@ -633,11 +633,7 @@ function getRandomInteger(min, max) {
  * 3, 4 => 5
  */
 function getHypotenuse(a, b) {
-  if (a === Number.MAX_VALUE || b === Number.MAX_VALUE) {
-    return Number.MAX_VALUE;
-  }
-  const d = Math.sqrt(a ** 2 + b ** 2);
-  return d;
+  return Math.hypot(a, b);
 }
 
 /**
